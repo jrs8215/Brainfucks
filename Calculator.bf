@@ -81,3 +81,10 @@ print "number: "
 CHECKPOINT:
     Enter 1st number: 
 
+Let the user input first number
+#18: length of user number
+#19: 0 for the loop to know where to get back to
+>>                     #18: 0; #19: 0
+>+[>,]                 Populate cells with bytes user enters
+<[<]                   go back to beginning where to #19
+>>[.>]                 Step two forward; increment by one and print out byte until reach null char
