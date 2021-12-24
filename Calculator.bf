@@ -81,10 +81,17 @@ print "number: "
 CHECKPOINT:
     Enter 1st number: 
 
-Let the user input first number
-#18: length of user number
-#19: 0 for the loop to know where to get back to
->>                     #18: 0; #19: 0
->+[>,]                 Populate cells with bytes user enters
-<[<]                   go back to beginning where to #19
->>[.>]                 Step two forward; increment by one and print out byte until reach null char
+The user now enters a single digit number:
+>,.                     #18: byte read in from user and print
+
+Print newline
+>>+++++++++++++.---.    #20: print carriage return and new line
+Print "Enter 2nd number: " using previous cells
+Read second number into #19 and prints new line
+<<<<<<<<<<<<<<<<<<<<.>.>.>.>.>.>+.>-----.----------.>>.>.>.>.>.>.>.>.>.>>,.>. points at #20
+
+Convert both ASCII nums into integer format:
+>>++++++[<++++++++>-]    #21: 48; #22: 0
+<[-<<-<->>>]             #18 && #19: inputNum ~ 48 
+<<[-<+>]                 #Add #19 to #18; points to #19; #19: 0
+<++++++++ ++++++++ ++++++++ ++++++++ ++++++++ ++++++++.
